@@ -3,7 +3,6 @@ import os
 import xml.etree.ElementTree as ET
 import pandas as pd
 import neo4j
-import pickle
 from tqdm import tqdm
 import logging
 import logging.config
@@ -166,22 +165,4 @@ if __name__ == "__main__":
          p.map(download_to_db, list(range(1,1063)))
    except Exception as e:
       logger.error("File number " + str(e.file_number) + ", incomplete, " + e.desc)
-   #files_to_process = list(range(1063,0,-1))
-   #outfile = open(directory + "files_to_process.pkl","wb")
-   #pickle.dump(files_to_process, outfile)
-   #outfile.close()
-
-   #infile = open(directory + "files_to_process.pkl","rb")
-   #files_to_process = pickle.load(infile)   
-   #infile.close()
-
-   #while len(files_to_process) > 0:
-   #file_number = 2 #files_to_process.pop()
-   #if download_to_xml(file_number) == 1:
-   #articles_df = xml_to_df(file_number)  
-   #df_to_db(articles_df)
-   #pickle.dump(files_to_process, outfile)
-   #outfile.close()
-
-
 
