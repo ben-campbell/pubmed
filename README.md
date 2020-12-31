@@ -9,3 +9,5 @@ Subsequent network analysis of the graph to follow.
 | file | description |
 |------|-------------|
 | pubmed_data.py | downloads, parses, and ingests data into Neo4j |
+| logging.conf | the configuration file for the pubmed_data.py logger|
+| requirements.txt | lists the Python prerequisite modules, to install via ```pip3 install requirements.txt``` |
